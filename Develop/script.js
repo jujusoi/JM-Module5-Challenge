@@ -5,7 +5,7 @@ var hour = dayjs().get('hour');
 console.log(hour);
 
 
-
+function call() {
 var NineAM = $("#hour-9");
 var TenAM = $("#hour-10");
 var ElevenAM = $("#hour-11");
@@ -27,14 +27,17 @@ function addColor() {
   setDivColors(16, FourPM);
   setDivColors(17, FivePM);
 }
+  addColor();
+};
+
 
 function setDivColors(time, div) {
   if (hour < time) {
-    div.attr("class", "row time-block future")
+    div.attr("class", "row time-block future");
   } else if (hour === time) {
-    div.attr("class", "row time-block present")
+    div.attr("class", "row time-block present");
   } else {
-    div.attr("class", "row time-block past")
+    div.attr("class", "row time-block past");
   }
 }
 
@@ -59,11 +62,31 @@ $("main").on("click", 'button', function() {
       return;
     } else {
       mainDiv.html(information);
-      addColor();
     }
   }
-  init();
-  addColor();
+
+function setTime() {
+  var currentDay = $("#currentDay");
+  var date = dayjs().format('dddd, MMMM D')
+  function determineTH() {
+    var day = dayjs().format('D');
+    if (day === "1") {
+      var result = 'st';
+    } else if (day === "2") {
+      var result = 'nd';
+    } else if (day === "3") {
+      var result = 'rd';
+    } else {
+      var result = 'th';
+    } return result;
+  } 
+  var th = determineTH();
+  currentDay.text(date + th);
+}
+
+init();
+call();
+setTime();
 
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
