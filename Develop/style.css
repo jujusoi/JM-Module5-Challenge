@@ -58,6 +58,24 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-header {
+#header-div {
   border-bottom: 5px solid black;
+}
+#localStorageSpan {
+font-family: monospace;
+color: rgb(182, 57, 57);
+}
+
+#clear-all {
+  height: 50px;
+  background-color: #06aed5;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 0px;
+}
+
+#clear-all:hover {
+  transition: ease-in-out 0.25s;
+  color: black;
 }
