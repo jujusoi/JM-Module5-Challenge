@@ -1,9 +1,4 @@
-var today = dayjs();
-console.log(today);
-
 var hour = dayjs().get('hour');
-console.log(hour);
-
 
 function call() {
 var NineAM = $("#hour-9");
@@ -98,4 +93,5 @@ clearAllButton.on("click", function() {
   allTextAreas.text("");
   window.localStorage.setItem("Information", mainDiv.html());
   saveText.html('Removed all schedules from <span id="localStorageSpan">localStorage</span>');
+  init();
 })
