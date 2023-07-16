@@ -41,7 +41,7 @@ $("main").on("click", 'button', function() {
   var mainDiv = $("#everything-div");
   var saveText = $("#save-text");
     if (mainDiv) {
-      window.localStorage.setItem("Information", mainDiv.html());
+      window.localStorage.setItem("schedulesavestuff", mainDiv.html());
       saveText.html('Saved schedule to <span id="localStorageSpan">localStorage✔️</span>');
     }
   });
@@ -54,7 +54,7 @@ $("main").on("click", 'button', function() {
 
   function init() {
     var mainDiv = $("#everything-div");
-    var information = window.localStorage.getItem("Information");
+    var information = window.localStorage.getItem("schedulesavestuff");
     if (information === null) {
       return;
     } else {
@@ -91,7 +91,7 @@ clearAllButton.on("click", function() {
   var allTextAreas = $("textarea");
   var saveText = $("#save-text");
   allTextAreas.text("");
-  window.localStorage.setItem("Information", mainDiv.html());
+  window.localStorage.setItem("schedulesavestuff", mainDiv.html());
   saveText.html('Removed all schedules from <span id="localStorageSpan">localStorage</span>');
   init();
 })
