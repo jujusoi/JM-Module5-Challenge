@@ -49,6 +49,6 @@ Simple design.
 
 ## Link
 
-GitHub:https://github.com/jujusoi/JM-Module5-Challenge
+GitHub:https://github.com/jujusoi/JM-Work-Scheduler
 
-GitHub Pages: https://jujusoi.github.io/JM-Module5-Challenge/
+GitHub Pages: https://jujusoi.github.io/JM-Work-Scheduler
